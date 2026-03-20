@@ -21,10 +21,10 @@ export default function HeroSection() {
               aşılama, kısırlaştırma, mikroçip, muayene ve acil müdahale
               hizmetleri sunuyoruz.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4">
               <Link
                 href="/iletisim"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-white hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-white hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25 w-full sm:w-auto"
               >
                 <svg
                   className="w-5 h-5"
@@ -43,7 +43,7 @@ export default function HeroSection() {
               </Link>
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-7 py-3.5 text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-7 py-3.5 text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors w-full sm:w-auto"
               >
                 <svg
                   className="w-5 h-5"
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 href={SITE_CONFIG.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-semibold text-white hover:bg-[#1fb855] transition-colors shadow-lg shadow-[#25D366]/25"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 text-base font-semibold text-white hover:bg-[#1fb855] transition-colors shadow-lg shadow-[#25D366]/25 w-full sm:w-auto"
               >
                 <svg
                   className="w-5 h-5"
