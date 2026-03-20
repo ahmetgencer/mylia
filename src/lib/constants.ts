@@ -31,6 +31,7 @@ export const SITE_CONFIG = {
   experience: "15+",
   priceRange: "$$",
   gtmId: process.env.NEXT_PUBLIC_GTM_ID || "",
+  gaId: process.env.NEXT_PUBLIC_GA_ID || "",
 };
 
 export const NAV_LINKS = [

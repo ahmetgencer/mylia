@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function HeroSection() {
@@ -21,7 +22,7 @@ export default function HeroSection() {
               hizmetleri sunuyoruz.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
+              <Link
                 href="/iletisim"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-white hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25"
               >
@@ -39,7 +40,7 @@ export default function HeroSection() {
                   />
                 </svg>
                 Randevu Al
-              </a>
+              </Link>
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-7 py-3.5 text-base font-semibold text-primary hover:bg-primary hover:text-white transition-colors"

@@ -195,12 +195,12 @@ export default function HakkimizdaPage() {
             Evcil Dostunuz İçin Randevu Alın
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            <Link
               href="/iletisim"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-semibold text-primary hover:bg-gray-100 transition-colors"
             >
               İletişime Geçin
-            </a>
+            </Link>
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               className="inline-flex items-center gap-2 rounded-full border-2 border-white px-8 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"

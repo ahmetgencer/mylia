@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeroSection from "@/components/home/HeroSection";
 import StatsSection from "@/components/home/StatsSection";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -30,12 +31,12 @@ export default function HomePage() {
             Randevu almak veya sorularınız için bize ulaşın
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            <Link
               href="/iletisim"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-primary hover:bg-gray-100 transition-colors"
             >
               Randevu Al
-            </a>
+            </Link>
             <a
               href="https://wa.me/905313439015"
               target="_blank"

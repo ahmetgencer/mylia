@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
@@ -83,6 +83,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className={inter.variable}>
       {SITE_CONFIG.gtmId && <GoogleTagManager gtmId={SITE_CONFIG.gtmId} />}
+      {SITE_CONFIG.gaId && <GoogleAnalytics gaId={SITE_CONFIG.gaId} />}
       <body className="antialiased">
         <LocalBusinessJsonLd />
         <Header />

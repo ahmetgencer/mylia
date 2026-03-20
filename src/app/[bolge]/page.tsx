@@ -12,11 +12,13 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return regions.map((region) => ({ bolge: region.slug }));
+  return regions.map((region) => ({ bolge: `${region.slug}-veteriner` }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { bolge } = await params;
+  const { bolge: rawBolge } = await params;
+  if (!rawBolge.endsWith("-veteriner")) return {};
+  const bolge = rawBolge.replace(/-veteriner$/, "");
   const region = regions.find((r) => r.slug === bolge);
   if (!region) return {};
 
@@ -29,7 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function RegionPage({ params }: Props) {
-  const { bolge } = await params;
+  const { bolge: rawBolge } = await params;
+  if (!rawBolge.endsWith("-veteriner")) notFound();
+  const bolge = rawBolge.replace(/-veteriner$/, "");
   const region = regions.find((r) => r.slug === bolge);
 
   if (!region) notFound();
